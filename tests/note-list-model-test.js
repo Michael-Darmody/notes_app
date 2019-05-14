@@ -20,7 +20,7 @@
 
     notelist.createnote("Favourite drink: seltzer");
     var notes = notelist.getList()
-    
+
     if (notes[notes.length - 1] !== list[list.length - 1] ) {
       throw new Error('Wrong list');
     }
