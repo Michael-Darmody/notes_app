@@ -15,13 +15,14 @@
 
 (function(exports) {
   function testCreateNotes() {
-    var notelist = new NoteList();
-    var list = ["Favourite drink: seltzer"];
 
-    notelist.createnote("Favourite drink: seltzer");
+    var notelist = new NoteList();
+    var text = "favourite drink"
+
+    notelist.createnote(text);
     var notes = notelist.getList()
 
-    if (notes[notes.length - 1] !== list[list.length - 1] ) {
+    if (notes[notes.length - 1].getNotetext() !== text ) {
       throw new Error('Wrong list');
     }
     else {console.log('pass')}
